@@ -16,8 +16,8 @@ This application provides a RESTful API wrapper around the [JSONPlaceholder](htt
 
 ## Prerequisites
 
-- Node.js (v14 or higher recommended)
-- npm (Node Package Manager)
+- Node.js (v14 or higher recommended) and npm (Node Package Manager)
+- OR Docker and Docker Compose (for containerized deployment)
 
 ## Installation
 
@@ -40,6 +40,56 @@ npm start
 ```
 
 The application will start on `http://localhost:3000` by default.
+
+## Docker
+
+### Using Docker Compose (Recommended)
+
+The easiest way to run the application with Docker is using Docker Compose:
+
+**Start the application:**
+```bash
+docker-compose up
+```
+
+**Start in detached mode (background):**
+```bash
+docker-compose up -d
+```
+
+**Stop the application:**
+```bash
+docker-compose down
+```
+
+**Rebuild and start:**
+```bash
+docker-compose up --build
+```
+
+**Run on a custom port:**
+```bash
+PORT=8080 docker-compose up
+```
+
+The application will be available at `http://localhost:3000` (or the port you specified).
+
+### Using Docker Directly
+
+**Build the Docker image:**
+```bash
+docker build -t sample-app .
+```
+
+**Run the container:**
+```bash
+docker run -p 3000:3000 sample-app
+```
+
+**Run on a different port (e.g., 8080):**
+```bash
+docker run -p 8080:3000 -e PORT=3000 sample-app
+```
 
 ## API Endpoints
 
