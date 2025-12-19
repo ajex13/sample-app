@@ -1,0 +1,24 @@
+{
+  "name": "sample-app",
+  "version": "1.0.0",
+  "description": "Express.js wrapper API for JSONPlaceholder with Swagger UI",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node index.js"
+  },
+  "keywords": [
+    "express",
+    "api",
+    "swagger",
+    "jsonplaceholder"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "axios": "^1.12.0",
+    "swagger-ui-express": "^5.0.0",
+    "swagger-jsdoc": "^6.2.8"
+  }
+}
