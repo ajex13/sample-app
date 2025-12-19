@@ -137,10 +137,10 @@ app.get('/posts/:id/comments', async (req, res) => {
  *     parameters:
  *       - in: query
  *         name: postId
- *         required: true
+ *         required: false
  *         schema:
  *           type: integer
- *         description: Post ID to filter comments
+ *         description: Post ID to filter comments (optional)
  *     responses:
  *       200:
  *         description: Successful response
